@@ -1,0 +1,65 @@
+.section {
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    min-width: 25vw; /* тут у мене напевне якась максимально дурна помилка має бути, яку я не зміг знайти: чомусь не зменшується картка, якщо вказую max-width - одразу звужується до мінімального розміру по ширині*/
+    width: 600px;
+    min-height: 350px;
+    background: rgb(136,195,241);
+    background: linear-gradient(90deg, rgba(136,195,241,1) 0%, rgba(60,149,206,1) 75%);
+    border-radius: 13px;
+    color: #ffffff;
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif; /* підгрузив з гугл фонтс, не впевнений, що використав найкращий спосіб підключити, але цей більше схожий на шрифт з макету */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.3em;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card-container::before, .card-container::after {
+    width: 370px;
+    height: 370px;
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.39539565826330536) 0%, rgba(255,255,255,0.0984768907563025) 100%);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.card-container::before {
+    bottom: 30%;
+    left: 65%;
+}
+
+.card-container::after {
+    left: 47%;
+    top: 43%;
+}
+
+.usercard-heading {
+    position: relative;
+}
+
+.card-container > p:first-of-type {
+    margin-bottom: 0.6em;
+    font-size: 1.7em;
+    font-weight: 900;
+}
+
+.bookmark {
+    fill: #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1.5em;
+    width: 1.5em;
+}
